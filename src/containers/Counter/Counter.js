@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';  // subscription established
-import * as actionCreators from '../../store/actions/actions';
+import * as actionCreators from '../../store/actions/index';
 
 import './Counter.css'
 import CounterControl from '../../components/CounterControl/CounterControl';
