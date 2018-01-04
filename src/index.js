@@ -21,8 +21,7 @@ const logger = store => {
     return action => {
       console.log('[Middleware] Dispatching', action);
       const result = next(action);
-      let asdf = { ...store.getState() };
-      console.log('[Middleware] next state (what does it all mean?) answer:', asdf.res.meaningOfLife)
+      console.log('[Middleware] next state', store.getState())
       return result
     }
   }

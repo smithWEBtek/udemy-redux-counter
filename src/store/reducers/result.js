@@ -1,20 +1,17 @@
-import * as actionTypes from '../actions';
+import * as actionTypes from '../actions/actions';
 
 const initialState = {
-  results: [],
-  meaningOfLife: 42
+  results: []
 }
 
 const resultReducer = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.STORE_RESULT: {
-
       const showState = { ...state }
       console.log('[resultReducer] state.results', showState.results)
-
       return {
         ...state,
-        results: state.results.concat({ id: new Date().getTime(), value: action.resultProp })
+        results: state.results.concat({ id: new Date().getTime(), value: action.result })
       }
     }
     case actionTypes.DELETE_RESULT:
